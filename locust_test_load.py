@@ -1,17 +1,3 @@
-# Locust Python
-
-[![PyPI](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
-[![PyPI](https://img.shields.io/badge/locust-%20%3D%3E%202.21-orange.svg)](https://pypi.org/project/locust/)
-
-## Installation
-#### Python => 3.11
-#### Locust => 2.21
-
-## Scripts
-
-#### Write user test scenarios in plain Python
-
-```python
 from locust import events
 
 from TaskSetLib.ViewCart import ViewCart
@@ -33,11 +19,3 @@ class UserGroupA(RegisteredHttpUser):
     weight = 1
     RegisteredHttpUser.tasks = [ViewCart]
 
-```
-
-## Run tests
-```
-    locust -f locust_test_load.py --host https://automationexercise.com
-```
-
-![Screenshot](img.png)
