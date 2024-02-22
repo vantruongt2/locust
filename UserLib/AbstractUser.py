@@ -22,3 +22,9 @@ class AbstractUser(HttpUser):
 
     def get_cookie(self):
         return self.user_attr['cookie']
+
+    def set_token(self, token):
+        self.user_attr['token'] = token
+
+    def get_token(self):
+        return self.user_attr['token']
