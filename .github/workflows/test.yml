@@ -13,7 +13,7 @@ jobs:
         with:
           LOCUSTFILE: "locust_test_load.py"
           REQUIREMENTS: "requirements.txt"
-          URL:  "https://google.com"
+          URL:  "http://automationexercise.com"
           USERS: "10"
           RATE: "5"
           RUNTIME: "10s"
