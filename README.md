@@ -37,7 +37,12 @@ class UserGroupA(RegisteredHttpUser):
 
 ## Run tests
 ```
-    locust -f locust_test_load.py --host https://automationexercise.com
+    locust -f locustfile.py --host https://automationexercise.com
+```
+
+## Run tests with Docker
+```
+    docker run --rm -p 8089:8089 -v /${PWD}:/locust --name locust locust --host https://automationexercise.com
 ```
 
 ![Screenshot](img.png)

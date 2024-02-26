@@ -11,7 +11,7 @@ jobs:
       - name: Run Load Test
         uses: apardo04/locust-github-action@requirements-test
         with:
-          LOCUSTFILE: "locust_test_load.py"
+          LOCUSTFILE: "locustfile.py"
           REQUIREMENTS: "requirements.txt"
           URL:  "http://automationexercise.com"
           USERS: "10"

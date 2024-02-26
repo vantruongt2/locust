@@ -1,4 +1,4 @@
-locustfile = locust_test_load.py
+locustfile = locustfile.py
 host =  http://automationexercise.com
 master = true
 expect-workers = 2
