@@ -2,15 +2,15 @@ version: '3'
 
 services:
   master:
-    image: locustio/locust
+    image: locust
     ports:
       - "8089:8089"
     volumes:
-      - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --master -H https://automationexercise.com
+      - ./:/locust
+    command: -f /locust/locustfile.py --master -H https://automationexercise.com
 
   worker:
-    image: locustio/locust
+    image: locust
     volumes:
       - ./:/mnt/locust
-    command: -f /mnt/locust/locustfile.py --worker --master-host master
+    command: -f /locust/locustfile.py --worker --master-host master

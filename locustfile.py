@@ -7,6 +7,10 @@ from CommonLib.LogModule import Logger
 
 @events.test_start.add_listener
 def on_test_start(**kwargs):
+    # if kwargs['environment'].parsed_options.logfile:
+    #     Logger.init_logger(__name__, kwargs['environment'].parsed_options.logfile)
+    # UserLoader.load_users()
+    # EventInfluxHandlers.init_influx_client()
     UserLoader.load_users()
     Logger.log_message("......... Initiating Load Test .......")
 
