@@ -10,7 +10,7 @@ class ViewCart(SequentialTaskSet):
             if response.status_code != 200:
                 response.failure("Failed to get all cart items, StatusCode: " + str(response.status_code))
             else:
-                if "Shopping Cart" in response.text:
+                if "Proceed To Checkout" in response.text:
                     response.success()
                 else:
                     response.failure("Failed to get all cart items, Text: " + response.text)
